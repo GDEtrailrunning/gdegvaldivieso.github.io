@@ -23,11 +23,9 @@ const dataLine2 = {
     tension: 0.1
   }]
 };
+
 // Configuración del gráfico de líneas
-
-
-// Seleccione los contextos de los <canvas> y cree los gráficos
-const myChartLine1 = new Chart(document.getElementById('myChart-line-1'), {
+const configLine = {
   type: 'line',
   data: dataLine1, // Puede cambiar esto a dataLine2 para mostrar el gráfico de la segunda sección
   options: {
@@ -37,9 +35,11 @@ const myChartLine1 = new Chart(document.getElementById('myChart-line-1'), {
       }
     }
   }
-});
+};
 
- const myChartLine2 = new Chart(document.getElementById('myChart-line-2'), {
+// Seleccione los contextos de los <canvas> y cree los gráficos
+const myChartLine1 = new Chart(document.getElementById('myChart-line-1'), configLine);
+const myChartLine2 = new Chart(document.getElementById('myChart-line-2'), {
   type: 'line',
   data: dataLine2,
   options: {
