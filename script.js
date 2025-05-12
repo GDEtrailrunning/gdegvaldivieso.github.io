@@ -5,8 +5,8 @@ document.addEventListener("DOMContentLoaded", function () {
 const dataLine1 = {
   labels: ['Día 1', 'Día 2', 'Dia 3', 'Día 4', 'Día 5'], // Etiquetas de los días
   datasets: [{
-    label: 'Km recorridos en Semana 13',
-    data: [18, 13, 12, 17, 26.4], // Datos de los km recorridos en cada día
+    label: 'Km recorridos en Semana 15',
+    data: [11, 15, 7, 13, 35], // Datos de los km recorridos en cada día
     borderColor: 'rgba(75, 192, 192, 1)',
     fill: true,
     tension: 0.1
@@ -16,8 +16,8 @@ const dataLine1 = {
 const dataLine2 = {
   labels: ['Día 1', 'Día 2', 'Dia 3', 'Día 4', 'Día 5'], // Etiquetas de los días
   datasets: [{
-    label: 'Km recorridos en Semana 14',
-    data: [17, 17, 9, 16, 25], // Datos de los km recorridos en cada día
+    label: 'Km recorridos en Semana 16',
+    data: [19, 17, 9, 17, 28], // Datos de los km recorridos en cada día
     borderColor: 'rgba(153, 102, 255, 1)',
     fill: true,
     tension: 0.1
@@ -107,8 +107,7 @@ function actualizarDiasRestantes() {
   document.getElementById("Semana 1").appendChild(video2);
   document.getElementById("Semana 2").appendChild(video3);
   document.getElementById("Semana 2").appendChild(video4);
-  
-  const audios = document.querySelectorAll("audio");
+
   audios.forEach(audio => {
     audio.addEventListener("play", () => {
       audios.forEach(otherAudio => {
