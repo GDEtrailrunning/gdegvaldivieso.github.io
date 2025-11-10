@@ -126,13 +126,16 @@ body {
 .column-container {
   display: flex;
   flex-wrap: wrap;
+  margin: 2em 4em;
+  padding: 1.5em;
 }
 
 .column {
   flex: 1;
-  padding: 1em;
+  padding: 1.5em;
   text-align: center;
   border: 1px solid #dddddd;
+  margin: 1em;
 }
 
 .small-paragraph-container {
