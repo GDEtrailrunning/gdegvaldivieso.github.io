@@ -127,10 +127,10 @@ body {
 
 /* Estilos para párrafos */
 p {
-    margin: 1.5em 6em;
+    margin: 0.5em 0em;
     font-family: "Tajawal", sans-serif;
     font-size: 1.1em;
-    line-height: 1.4;
+    line-height: 1em;
     color: #333;
     text-align: left;
 }
@@ -347,3 +347,4 @@ video {
   font-weight: bold;
 
 }
+
