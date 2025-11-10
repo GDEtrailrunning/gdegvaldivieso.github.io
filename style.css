@@ -129,10 +129,10 @@ body {
 p {
     margin: 1.5em 6em;
     font-family: "Tajawal", sans-serif;
-    font-size: 1.2em;
-    line-height: 1.6;
+    font-size: 1.1em;
+    line-height: 1.4;
     color: #333;
-    text-align: center;
+    text-align: left;
 }
 
 /* Estilos específicos para el contenedor de gráficos */
@@ -345,4 +345,5 @@ video {
   font-size: 1.0em;
   margin: 5em;
   font-weight: bold;
+
 }
