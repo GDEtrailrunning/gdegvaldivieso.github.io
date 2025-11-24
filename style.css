@@ -24,7 +24,6 @@
 }
 /* styles.css */
 
-/* Reset básico */
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
@@ -32,11 +31,10 @@ body {
   box-sizing: border-box;
 }
 
-/* Ajuste del container principal */
 .container {
-  max-width: 1200px; /* Ancho máximo fijo */
+  max-width: 90%;
   margin: 0 auto;
-  padding: 2em;
+  padding: 1em;
 }
 
 /* --- H1 con imagen de fondo --- */
@@ -125,55 +123,16 @@ body {
   color: #666666;
 }
 
-/* Estilos para párrafos */
-p {
-    margin: 0.5em 0em;
-    font-family: "Tajawal", sans-serif;
-    font-size: 1.1em;
-    line-height: 1em;
-    color: #333;
-    text-align: left;
-}
-
-/* Estilos específicos para el contenedor de gráficos */
-.chart-container {
-    display: flex;
-    flex-direction: column;
-    margin: 4em 6em;
-    padding: 2em;
-    background-color: #ffffff;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    border-radius: 8px;
-}
-
-/* Media query para dispositivos móviles */
-@media screen and (max-width: 768px) {
-    .chart-container {
-        margin: 2em 1em;
-        padding: 1em;
-    }
-}
-
 .column-container {
   display: flex;
   flex-wrap: wrap;
-  margin: 4em 6em; /* Márgenes más grandes */
-  padding: 2em;
-  gap: 2em; /* Espacio entre columnas */
-  background-color: #ffffff;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Sombra sutil */
-  border-radius: 8px;
 }
 
 .column {
   flex: 1;
-  min-width: 250px; /* Ancho mínimo para mejor responsividad */
-  padding: 2em;
-  margin: 0; /* Quitamos el margen individual */
+  padding: 1em;
   text-align: center;
   border: 1px solid #dddddd;
-  border-radius: 4px;
-  background-color: #fafafa;
 }
 
 .small-paragraph-container {
@@ -340,11 +299,3 @@ video {
     width: 100%;
   }
 }
-.h5 {
-  color: #333333;
-  font-size: 1.0em;
-  margin: 5em;
-  font-weight: bold;
-
-}
-
