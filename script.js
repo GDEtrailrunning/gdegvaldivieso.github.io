@@ -14,7 +14,7 @@ const dataLine1 = {
 };
 
 const dataLine2 = {
-  labels: ['Día 1', 'Día 2', 'Dia 3', 'Día 4'], // Etiquetas de los días
+  labels: ['Día 1', 'Día 2', 'Dia 3', 'Día 4', 'Día 5'], // Etiquetas de los días
   datasets: [{
     label: 'Km recorridos en Semana 7',
     data: [17, 9, 11, 9, 25], // Datos de los km recorridos en cada día
