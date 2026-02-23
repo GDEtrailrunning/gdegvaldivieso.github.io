@@ -5,8 +5,8 @@ document.addEventListener("DOMContentLoaded", function () {
 const dataLine1 = {
   labels: ['Día 1', 'Día 2', 'Dia 3', 'Día 4', 'Día 5'], // Etiquetas de los días
   datasets: [{
-    label: 'Km recorridos en Semana 6',
-    data: [13, 12, 9, 12, 25], // Datos de los km recorridos en cada día
+    label: 'Km recorridos en Semana 8',
+    data: [18, 12, 18, 16, 25], // Datos de los km recorridos en cada día
     borderColor: 'rgba(75, 192, 192, 1)',
     fill: true,
     tension: 0.1
@@ -16,8 +16,8 @@ const dataLine1 = {
 const dataLine2 = {
   labels: ['Día 1', 'Día 2', 'Dia 3', 'Día 4', 'Día 5'], // Etiquetas de los días
   datasets: [{
-    label: 'Km recorridos en Semana 7',
-    data: [17, 9, 11, 9, 25], // Datos de los km recorridos en cada día
+    label: 'Km recorridos en Semana 9',
+    data: [20, 9, 12, 17, 28], // Datos de los km recorridos en cada día
     borderColor: 'rgba(153, 102, 255, 1)',
     fill: true,
     tension: 0.1
@@ -29,6 +29,7 @@ const configLine = {
   type: 'line',
   data: dataLine1, // Puede cambiar esto a dataLine2 para mostrar el gráfico de la segunda sección
   options: {
+    maintainAspectRatio: false,
     scales: {
       y: {
         beginAtZero: true
@@ -43,6 +44,7 @@ const myChartLine2 = new Chart(document.getElementById('myChart-line-2'), {
   type: 'line',
   data: dataLine2,
   options: {
+    maintainAspectRatio: false,
     scales: {
       y: {
         beginAtZero: true
@@ -94,14 +96,16 @@ function actualizarDiasRestantes() {
   Semana_2_video_4.loop = false;
 
 
-  audios.forEach(audio => {
-    audio.addEventListener("play", () => {
-      audios.forEach(otherAudio => {
-        if (otherAudio !== audio) {
-          otherAudio.pause();
-        }
+  if (typeof audios !== 'undefined' && audios && audios.forEach) {
+    audios.forEach(audio => {
+      audio.addEventListener("play", () => {
+        audios.forEach(otherAudio => {
+          if (otherAudio !== audio) {
+            otherAudio.pause();
+          }
+        });
       });
     });
-  });
+  }
 });
 
