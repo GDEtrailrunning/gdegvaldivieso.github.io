@@ -81,9 +81,17 @@ p {
   margin: 1.5em 0;
 }
 
-video {
+.image-container {
+  margin: 1.5em 0;
+  text-align: center;
+}
+
+.image-container video {
   width: 100%;
+  max-width: 480px; /* Limita el ancho para que se vean más pequeños */
+  height: auto;
   border-radius: 8px;
+  display: inline-block;
 }
 
 /* ===============================
