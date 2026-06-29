@@ -197,3 +197,71 @@ img {
     padding: 1.2em;
   }
 }
+
+.sub-container h4 {
+  position: relative;
+  color: #222;
+  padding: 24px 24px 40px 24px;
+  border-radius: 10px;
+  min-height: 120px;
+  box-sizing: border-box;
+  text-shadow: 1px 1px 8px rgba(255,255,255,0.7);
+  overflow: hidden;
+  background: #fff;
+  border: 2px solid #444; /* Borde gris oscuro */
+}
+
+.sub-container h4::after {
+  content: "";
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  width: 160px;   /* Aumenta el ancho de la imagen */
+  height: 80px;  /* Aumenta el alto de la imagen */
+  background: url('2.jpeg') no-repeat right bottom;
+  background-size: contain;
+  opacity: 0.9;
+  pointer-events: none;
+  border-radius: 8px;
+  z-index: 1;
+}
+
+.image-container {
+  background-color: #fffdfd;
+  text-align-last: left; 
+  padding: 1em;
+  width: 100%;
+  border-radius: 8px; 
+  height:auto;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  overflow: hidden;
+}
+
+.image-container video {
+  max-width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 
+      repeat(auto-fit, minmax(150px, 1fr)
+      );
+      gap:32px;
+  margin: 0 auto;
+  object-fit: cover;
+}
+.imagen-chica {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: 100%;
+}
+@media (max-width: 600px) {
+  .imagen-chica {
+    width: 100%;
+  }
+}
+
+.sub-container.no-image h4::after {
+  display: none;
+}
