@@ -1,12 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
   //actualizarDiasRestantes();
   //setInterval(actualizarDiasRestantes, 24*60*60*1000); // Actualizar diario
-   // Datos para el gráfico de líneas
+  // Datos para el gráfico de líneas
 const dataLine1 = {
-  labels: ['Día 1', 'Día 2', 'Dia 3', 'Día 4', 'Día 5'], // Etiquetas de los días
+  labels: ['Día 1', 'Día 2', 'Día 3', 'Día 4'], // Etiquetas de los días
   datasets: [{
-    label: 'Km recorridos en Semana 22',
-    data: [15, 13, 12, 9, 22], // Datos de los km recorridos en cada día
+    label: 'Km recorridos en Semana 24',
+    data: [14, 5, 16, 20], // Datos de los km recorridos en cada día
     borderColor: 'rgba(75, 192, 192, 1)',
     fill: true,
     tension: 0.1
@@ -14,22 +14,20 @@ const dataLine1 = {
 };
 
 const dataLine2 = {
-  labels: ['Día 1', 'Día 2', 'Dia 3', 'Día 4', 'Día 5'], // Etiquetas de los días
+  labels: ['Día 1', 'Día 2', 'Día 3', 'Día 4'], // Etiquetas de los días
   datasets: [{
-    label: 'Km recorridos en Semana 23',
-    data: [6, 18, 8, 19, 22], // Datos de los km recorridos en cada día
+    label: 'Km recorridos en Semana 25',
+    data: [14, 9, 15, 15], // Datos de los km recorridos en cada día
     borderColor: 'rgba(153, 102, 255, 1)',
     fill: true,
     tension: 0.1
   }]
 };
-
 // Configuración del gráfico de líneas
 const configLine = {
   type: 'line',
   data: dataLine1, // Puede cambiar esto a dataLine2 para mostrar el gráfico de la segunda sección
   options: {
-    maintainAspectRatio: false,
     scales: {
       y: {
         beginAtZero: true
@@ -44,7 +42,6 @@ const myChartLine2 = new Chart(document.getElementById('myChart-line-2'), {
   type: 'line',
   data: dataLine2,
   options: {
-    maintainAspectRatio: false,
     scales: {
       y: {
         beginAtZero: true
@@ -52,6 +49,7 @@ const myChartLine2 = new Chart(document.getElementById('myChart-line-2'), {
     }
   }
 });
+
 
 function actualizarDiasRestantes() {
   // Fecha objetivo fija
@@ -95,17 +93,10 @@ function actualizarDiasRestantes() {
   Semana_2_video_4.autoplay = false;
   Semana_2_video_4.loop = false;
 
+  // Agregar los dos videos a cada sección
+  document.getElementById("Semana 1").appendChild(video1);
+  document.getElementById("Semana 1").appendChild(video2);
+  document.getElementById("Semana 2").appendChild(video3);
+  document.getElementById("Semana 2").appendChild(video4);
 
-  if (typeof audios !== 'undefined' && audios && audios.forEach) {
-    audios.forEach(audio => {
-      audio.addEventListener("play", () => {
-        audios.forEach(otherAudio => {
-          if (otherAudio !== audio) {
-            otherAudio.pause();
-          }
-        });
-      });
-    });
-  }
 });
-
